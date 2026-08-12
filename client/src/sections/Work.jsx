@@ -45,10 +45,10 @@ export default function Work({ setCursorVariant }) {
           <div className="project-viewer">
             <div className="project-frame">
               <AnimatePresence mode="wait">
-                <motion.div key={active.slug} initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="project-art">
+                <motion.div key={active.slug} initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="project-art project-art-image">
                   <span className="project-frame-index">{String(projects.indexOf(active) + 1).padStart(2, '0')}</span>
-                  <div className="project-monogram">{active.title.split(' ').map((word) => word[0]).join('').slice(0, 3)}</div>
-                  <p>{active.platform} / Production website</p>
+                  <img src={active.heroImage} alt={`${active.title} website homepage`} />
+                  <div className="project-art-caption"><strong>{active.title}</strong><span>{active.platform}</span></div>
                 </motion.div>
               </AnimatePresence>
             </div>

@@ -5,8 +5,13 @@ export default function About() {
   return (
     <section id="about" className="section-padding about-editorial">
       <div className="section-container about-layout">
-        <motion.div className="about-stat" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <span>3+</span><strong>Years</strong><p>Web development</p>
+        <motion.div className="about-portrait-column" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <figure className="about-portrait">
+            <div className="about-portrait-index">AZ · 01</div>
+            <img src="/profile/adnan-zohair-portrait.png" alt="Adnan Zohair, web developer" />
+            <figcaption><span>Web developer</span><span>Karachi · PK</span></figcaption>
+          </figure>
+          <div className="about-experience"><strong>5+</strong><div><span>Years</span><small>Building for the web</small></div></div>
         </motion.div>
         <motion.div className="about-body" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.12 }}>
           <p className="eyebrow"><span /> About</p>
