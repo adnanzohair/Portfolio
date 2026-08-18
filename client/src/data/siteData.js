@@ -257,7 +257,7 @@ export const profile = {
     email: 'adnanzohair2@gmail.com',
     phone: '+92-336-0232152',
     linkedin: 'https://linkedin.com/in/adnan-zohair-4527ab192',
-    bio: 'Full-stack web developer with 3+ years of experience turning business requirements into fast, stable and production-ready digital products. Experienced across MERN applications, content platforms, e-commerce systems and API-driven integrations.',
+    bio: 'Full-stack web developer with 5+ years of experience turning business requirements into fast, stable and production-ready digital products. Experienced across MERN applications, content platforms, e-commerce systems and API-driven integrations.',
     strengths: [
         'Performance Optimization',
         'Custom Theme Development',
