@@ -14,7 +14,7 @@ export default function Loader() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             >
-                AZ
+                ADNAN ZOHAIR
             </motion.div>
 
             {/* Loading bar */}

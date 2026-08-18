@@ -10,7 +10,7 @@ const areas = [
     { title: 'Performance Optimization', description: 'Page speed audits, caching strategies, lazy loading and code optimization for sub-second load times.' },
     { title: 'Caching Strategy', description: 'Full-page cache, block cache, Varnish and CDN configuration for optimal server response.' },
     { title: 'Plugin Optimization', description: 'Auditing plugin bloat, removing unnecessary HTTP requests and reducing JavaScript payload.' },
-    { title: 'Debugging', description: 'Systematic diagnosis of complex production issues across Magento 2 and WordPress environments.' },
+    { title: 'Debugging', description: 'Systematic diagnosis of complex issues across full-stack applications, content platforms and production environments.' },
     { title: 'Stability', description: 'Building systems that handle real traffic without breaking — tested under production conditions.' },
     { title: 'Technical SEO', description: 'Structured data, site architecture, crawlability and on-page optimizations for search visibility.' },
 ];

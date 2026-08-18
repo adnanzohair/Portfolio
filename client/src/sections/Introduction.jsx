@@ -14,7 +14,7 @@ export default function Introduction() {
         >
           I BUILD FOR<br /><em>THE REAL WEB.</em>
         </motion.h2>
-        <p className="statement-copy">From complex e-commerce platforms to custom WordPress experiences, I focus on systems that are fast, reliable and built to survive real-world production.</p>
+        <p className="statement-copy">From custom web applications to content-rich business platforms, I focus on systems that are fast, reliable and built to thrive in real-world production.</p>
       </div>
     </section>
   );

@@ -17,7 +17,7 @@ export default function About() {
           <p className="eyebrow"><span /> About</p>
           <h2>COMPLEX SYSTEMS.<br /><em>CLEAN EXECUTION.</em></h2>
           <p className="about-lead">{profile.bio}</p>
-          <p>From custom Magento 2 extensions to WordPress themes, plugins and production support, the work is owned from analysis through deployment—with performance, stability and maintainability built in.</p>
+          <p>From full-stack applications and API integrations to business websites and production support, the work is owned from analysis through deployment—with performance, stability and maintainability built in.</p>
           <dl className="about-meta">
             <div><dt>Location</dt><dd>Karachi, Pakistan</dd></div>
             <div><dt>Focus</dt><dd>E-commerce / Web Development</dd></div>

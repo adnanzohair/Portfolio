@@ -2,6 +2,7 @@ import express from 'express';
 import rateLimit from 'express-rate-limit';
 import { body, validationResult } from 'express-validator';
 import mongoose from 'mongoose';
+import { saveContactSubmission } from '../services/submissionSheet.js';
 
 const router = express.Router();
 
@@ -16,10 +17,10 @@ router.post(
     '/',
     contactLimiter,
     [
-        body('name').trim().notEmpty().withMessage('Name is required').escape(),
+        body('name').trim().notEmpty().withMessage('Name is required').isLength({ max: 100 }),
         body('email').isEmail().withMessage('Valid email is required').normalizeEmail(),
-        body('projectType').optional().trim().escape(),
-        body('message').trim().notEmpty().withMessage('Message is required').isLength({ max: 2000 }).escape(),
+        body('projectType').optional().trim().isLength({ max: 100 }),
+        body('message').trim().notEmpty().withMessage('Message is required').isLength({ max: 2000 }),
     ],
     async (req, res, next) => {
         try {
@@ -33,11 +34,11 @@ router.post(
             if (mongoose.connection.readyState === 1) {
                 const Contact = (await import('../models/Contact.js')).default;
                 await Contact.create({ name, email, projectType, message });
-            } else {
-                console.log('Contact submission (mock):', { name, email, projectType, message });
             }
 
-            res.status(201).json({ success: true, message: 'Message sent successfully.' });
+            await saveContactSubmission({ name, email, projectType, message });
+
+            res.status(201).json({ success: true, message: 'Message saved successfully.' });
         } catch (err) { next(err); }
     }
 );

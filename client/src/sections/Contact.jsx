@@ -8,18 +8,21 @@ const fadeUp = {
 };
 
 const projectTypes = [
-    'Magento 2 Development',
-    'WordPress Development',
-    'E-commerce Development',
+    'Custom Web Application',
+    'MERN / Full-Stack Development',
+    'Business Website / CMS',
+    'E-commerce Platform',
     'Performance Optimization',
     'Custom Plugin / Extension',
     'Other',
 ];
 
+const whatsappNumber = '923360232152';
+
 export default function Contact({ setCursorVariant }) {
     const ref = useRef(null);
     const inView = useInView(ref, { once: true, margin: '-100px' });
-    const [formState, setFormState] = useState('idle'); // idle | loading | success | error
+    const [formState, setFormState] = useState('idle'); // idle | success
     const [formData, setFormData] = useState({ name: '', email: '', projectType: '', message: '' });
     const [errors, setErrors] = useState({});
 
@@ -32,24 +35,26 @@ export default function Contact({ setCursorVariant }) {
         return Object.keys(e).length === 0;
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         if (!validate()) return;
-        setFormState('loading');
 
-        try {
-            const res = await fetch('/api/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
-            });
+        const whatsappMessage = [
+            'Hello, I would like to discuss a project.',
+            '',
+            `Name: ${formData.name.trim()}`,
+            `Email: ${formData.email.trim()}`,
+            `Project type: ${formData.projectType || 'Not specified'}`,
+            `Message: ${formData.message.trim()}`,
+        ].join('\n');
 
-            if (!res.ok) throw new Error('Failed');
-            setFormState('success');
-            setFormData({ name: '', email: '', projectType: '', message: '' });
-        } catch {
-            setFormState('error');
-        }
+        window.open(
+            `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`,
+            '_blank',
+            'noopener,noreferrer',
+        );
+        setFormState('success');
+        setFormData({ name: '', email: '', projectType: '', message: '' });
     };
 
     return (
@@ -74,8 +79,8 @@ export default function Contact({ setCursorVariant }) {
                         transition={{ delay: 0.2 }}
                     >
                         <p className="contact-lead">
-                            Ready to build something exceptional? Whether it&apos;s a Magento 2 store, WordPress site, or
-                            a custom web platform — let&apos;s talk about your project.
+                            Ready to build something exceptional? Whether it&apos;s a custom application, business website,
+                            e-commerce experience or API-driven platform — let&apos;s talk about your project.
                         </p>
 
                         <div className="contact-details">
@@ -120,8 +125,8 @@ export default function Contact({ setCursorVariant }) {
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                                     </svg>
                                 </div>
-                                <h3>Message sent</h3>
-                                <p>Thank you! I&apos;ll get back to you soon.</p>
+                                <h3>WhatsApp opened</h3>
+                                <p>Your message is ready. Tap send in WhatsApp to submit it.</p>
                                 <button
                                     type="button"
                                     onClick={() => setFormState('idle')}
@@ -183,22 +188,13 @@ export default function Contact({ setCursorVariant }) {
                                     {errors.message && <p className="field-error">{errors.message}</p>}
                                 </div>
 
-                                {formState === 'error' && (
-                                    <p className="form-error">Something went wrong. Please try again.</p>
-                                )}
-
                                 <button
                                     type="submit"
-                                    disabled={formState === 'loading'}
                                     className="contact-submit"
                                     onMouseEnter={() => setCursorVariant?.('button')}
                                     onMouseLeave={() => setCursorVariant?.('default')}
                                 >
-                                    {formState === 'loading' ? (
-                                        <span className="contact-spinner" />
-                                    ) : (
-                                        <>Start a conversation <span aria-hidden="true">↗</span></>
-                                    )}
+                                    <>Continue on WhatsApp <span aria-hidden="true">↗</span></>
                                 </button>
                             </>
                         )}

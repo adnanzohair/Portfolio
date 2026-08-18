@@ -40,7 +40,7 @@ export default function Hero({ setCursorVariant }) {
       <motion.div style={{ y: contentY, opacity }} className="section-container hero-layout">
         <div className="hero-copy">
           <motion.p className="eyebrow" custom={0.35} variants={reveal} initial="hidden" animate="visible">
-            <span /> Web Developer / E-commerce Engineer
+            <span /> Full-Stack Web Developer
           </motion.p>
           <h1 className="hero-title" aria-label="Building digital systems">
             {['BUILDING', 'DIGITAL', 'SYSTEMS.'].map((line, index) => (
@@ -50,7 +50,7 @@ export default function Hero({ setCursorVariant }) {
             ))}
           </h1>
           <motion.p className="hero-description" custom={1} variants={reveal} initial="hidden" animate="visible">
-            Building fast, reliable and production-ready digital experiences across Magento 2, WordPress and modern web platforms.
+            Building fast, reliable and production-ready web applications, business platforms and digital experiences.
           </motion.p>
           <motion.div className="hero-actions" custom={1.15} variants={reveal} initial="hidden" animate="visible">
             <a href="#work" onClick={scrollTo('work')} className="button-primary" onMouseEnter={() => setCursorVariant('button')} onMouseLeave={() => setCursorVariant('default')}>View my work <span>↗</span></a>

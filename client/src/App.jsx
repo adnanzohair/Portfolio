@@ -20,6 +20,15 @@ export default function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    if (!loading && window.location.hash) {
+      const hashTimer = window.setTimeout(() => {
+        document.querySelector(window.location.hash)?.scrollIntoView({ behavior: 'auto', block: 'start' });
+      }, 250);
+      return () => window.clearTimeout(hashTimer);
+    }
+  }, [loading]);
+
   if (loading) return <Loader />;
 
   return (

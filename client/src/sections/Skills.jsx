@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 
 const toolkit = {
-  Commerce: ['Magento 2', 'Shopify'],
-  CMS: ['WordPress', 'Webflow'],
-  Languages: ['PHP', 'JavaScript', 'jQuery', 'HTML5', 'CSS3'],
-  'Data / APIs': ['MySQL', 'AJAX', 'JSON', 'XML', 'APIs'],
+  Frontend: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Responsive UI'],
+  Backend: ['Node.js', 'Express.js', 'PHP', 'REST APIs'],
+  Data: ['MongoDB', 'MySQL', 'JSON', 'AJAX'],
+  Platforms: ['WordPress', 'Magento 2', 'Webflow', 'Shopify'],
   Infrastructure: ['Linux', 'Git', 'GitHub'],
   Optimization: ['Technical SEO', 'Performance'],
 };

@@ -7,7 +7,7 @@ const fadeUp = {
 };
 
 const layers = [
-    { label: 'Frontend', sub: 'React · Magento 2 · WordPress · Webflow', icon: '◇' },
+    { label: 'Frontend', sub: 'React · JavaScript · Responsive UI · Modern CSS', icon: '◇' },
     { label: 'API Layer', sub: 'REST · AJAX · JSON · XML · Third-party APIs', icon: '◈' },
     { label: 'Backend', sub: 'PHP · Node.js · Express.js · Custom Extensions', icon: '◆' },
     { label: 'Database', sub: 'MySQL · MongoDB · Data Modeling', icon: '▣' },

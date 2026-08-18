@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { projects } from '../data/siteData';
 
-const filters = ['All', 'Magento 2', 'WordPress', 'Webflow'];
+const filters = ['All', 'MERN', 'WordPress', 'Magento 2', 'Webflow'];
 
 export default function Work({ setCursorVariant }) {
   const [filter, setFilter] = useState('All');
