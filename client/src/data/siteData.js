@@ -1,5 +1,20 @@
 export const projects = [
     {
+        title: 'Hirsch Solutions',
+        slug: 'hirsch-solutions-shopify-plus',
+        platform: 'Shopify Plus',
+        url: 'https://shop.hsi.us/',
+        description: 'A Shopify Plus storefront for a leading apparel-decoration supplier, designed and developed with a streamlined B2B purchasing flow, customer-specific pricing and an intuitive product discovery experience.',
+        heroImage: '/projects/hirsch-solutions.png',
+        gallery: [],
+        video: null,
+        technologies: ['Shopify Plus', 'Liquid', 'JavaScript', 'CSS3', 'HTML5', 'Shopify B2B'],
+        services: ['B2B E-commerce Development', 'UX/UI Design', 'Shopify Theme Development', 'Customer-Specific Pricing Flow'],
+        role: 'Shopify Plus Developer & Designer',
+        featured: true,
+        order: 1,
+    },
+    {
         title: 'Rubitt — AI LMS',
         slug: 'rubitt-ai-lms',
         platform: 'MERN',
